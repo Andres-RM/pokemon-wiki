@@ -1,0 +1,57 @@
+// System grid Flexbox
+
+@mixin build-row($gutter: $grid-gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: calc(#{$gutter} / -2);
+  margin-left: calc(#{$gutter} / -2);
+}
+
+@mixin build-col-ready($gutter: $grid-gutter) {
+  box-sizing:  border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc( #{$gutter} / 2 );
+  padding-left: calc( #{$gutter} / -2 );
+  margin-top: 0;
+}
+
+@mixin build-col($size, $columns: $flex-columns) {
+  flex: 0 0 auto;
+  width: percentage($size / $columns);
+}
+
+@mixin media-breakpoint($breakpoint, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $breakpoint);
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin build-columns($columns: $flex-columns, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $min: if(map-get($breakpoints,$breakpoint) == 0, null, $breakpoint);
+    $column-fix: if($min, "-#{$breakpoint}", "");
+
+    @include media-breakpoint($breakpoint, $breakpoints) {
+
+      .col#{$column-fix} {
+        flex: 1 0 0;
+      }
+
+      @for $i from 1 through $columns {
+        .col#{$column-fix}-#{$i} {
+          @include build-col($i, $columns);
+        }
+      }
+
+    }
+
+  }
+}
