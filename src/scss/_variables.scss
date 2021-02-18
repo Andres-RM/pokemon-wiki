@@ -4,6 +4,7 @@
 
 
 $prefix: pk- !default;
+$spacer: 1rem !default;
 
 
 // ---------- Color -------------
@@ -16,11 +17,26 @@ $accent: #CCC717 !default;
 $complementary: #BC163A !default;
 
 $success: #198754 !default;
-$indo: #0d6efd !default;
+$info: #0d6efd !default;
 $warning: #ffc107 !default;
 $danger: #dc3545 !default;
 $light: #f5f5fa !default;
 $dark: #25272b !default;
+
+$colors: (
+  white: $white,
+  black: $black,
+  primary: $primary,
+  secondary: $secondary,
+  accent: $accent,
+  complementary: $complementary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark
+);
 
 
 $body-bg: $white !default;
@@ -71,3 +87,8 @@ $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
+
+
+// --------- Navs ---------
+$navbar-padding-y: $spacer / 2 !default;
+$navbar-padding-x: 0 !default;

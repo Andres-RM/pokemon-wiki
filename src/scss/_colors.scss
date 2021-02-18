@@ -1,0 +1,9 @@
+
+@each $name, $value in $colors {
+  .#{$name} {
+    @include color-background($value)
+  }
+  .#{$name}--text {
+    @include color-text($value)
+  }
+}

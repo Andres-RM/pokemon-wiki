@@ -1,0 +1,10 @@
+
+@mixin color-text($color-value){
+  color: $color-value !important;
+  caret-color: $color-value !important;
+}
+
+@mixin color-background($color_value) {
+  background-color: $color_value !important;
+  border-color: $color_value !important;
+}
