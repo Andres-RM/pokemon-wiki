@@ -1,0 +1,73 @@
+// Variables
+
+// ---------- Global -----------
+
+
+$prefix: pk- !default;
+
+
+// ---------- Color -------------
+$white: #fff !default;
+$black: #000 !default;
+
+$primary: #4BB114 !default;
+$secondary: #165683 !default;
+$accent: #CCC717 !default;
+$complementary: #BC163A !default;
+
+$success: #198754 !default;
+$indo: #0d6efd !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+$light: #f5f5fa !default;
+$dark: #25272b !default;
+
+
+$body-bg: $white !default;
+$body-color: $dark !default;
+
+$link-color: $secondary !default;
+
+
+// ----------- Grid ------------
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+$flex-columns: 12 !default;
+$grid-gutter: 1.5rem !default;
+
+// ------------- Typography -----------
+
+$font-family-sans-serif: Roboto, sans-serif !default;
+$font-family-base: var(--#{$prefix}font-sans-serif) !default;
+
+$font-size-base: 16px !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
